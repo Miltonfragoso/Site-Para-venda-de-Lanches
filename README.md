@@ -14,9 +14,9 @@
   -Lanche (Nome, preço, descrição curta, descrição longa, imagem, imagem miniatura, CATEGORIA, é preferido, esta disponível)
   -Categoria (Nome e descrição)
 
-==>Entity Framework Core 2.0: Para mapeiar as classes para as tabelas na abordagem Code-First(Gerar o banco e popular as tabelas a partir das classes)
+==>ENTITY FRAMEWORK CORE 2.0: Para mapeiar as classes para as tabelas na abordagem Code-First(Gerar o banco e popular as tabelas a partir das classes)
 
-==>Padrão Repository: Serve para remover o acoplamento entre CONTROLLER ==> EF Core
+==>PADRAO REPOSITORY: Serve para remover o acoplamento entre CONTROLLER ==> EF Core
 
                     ==> Incluindo uma camada entre o CONTROLLER==>(REPOSITORY)==>EF Core==>BD
                     
@@ -24,3 +24,5 @@
                         usado para desacoplar o modelo de domínio do código de acesso a dados.
                         
                     ==>Sua implementação e feita por meio de INTERFACES.
+==>CONTROLLER E VIEWS:
+                  
