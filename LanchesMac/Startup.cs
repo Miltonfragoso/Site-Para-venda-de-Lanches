@@ -1,4 +1,5 @@
 ﻿using LanchesMac.Context;
+using LanchesMac.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -30,6 +31,8 @@ namespace LanchesMac
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Data Source=DESKTOP-BFJTFD7\\SQLEXPRESS;Database=Lanches.db;Trusted_Connection=True;"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddTransient<CategoriaRepository, CategoriaRepository>();
+            services.AddTransient<LancheRepository, LancheRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
