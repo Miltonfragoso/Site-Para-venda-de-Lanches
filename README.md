@@ -17,7 +17,10 @@
 ==>Entity Framework Core 2.0: Para mapeiar as classes para as tabelas na abordagem Code-First(Gerar o banco e popular as tabelas a partir das classes)
 
 ==>Padrão Repository: Serve para remover o acoplamento entre CONTROLLER ==> EF Core
+
                     ==> Incluindo uma camada entre o CONTROLLER==>(REPOSITORY)==>EF Core==>BD
+                    
                     ==> Padrão repository é um padrão estrutural que separa a lógica de domínio da lógica de acesso aos dados
                         usado para desacoplar o modelo de domínio do código de acesso a dados.
+                        
                     ==>Sua implementação e feita por meio de INTERFACES.
