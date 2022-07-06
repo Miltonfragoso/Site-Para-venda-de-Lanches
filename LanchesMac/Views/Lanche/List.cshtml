@@ -1,5 +1,4 @@
-﻿
-@*Diretiva para especificar o tipo que estou tratando na minha view
+﻿@*Diretiva para especificar o tipo que estou tratando na minha view
     neste caso uma lista de lanche
 *@
 @*@model IEnumerable<LanchesMac.Models.Lanche>*@
@@ -8,12 +7,11 @@
     onde var lenche é uma variável e Model==Lista de Lanche.
 *@
 
-@using LanchesMac.Models
-@model IEnumerable<Lanche>
+@model LanchesListViewModel
 
-<div><h2>Todos os lanches</h2></div>
+<div><h2>@Model.CategoriaAtual</h2></div>
 
-@foreach (var lanche in Model)
+@foreach (var lanche in Model.Lanches)
 {
     <div class="col-sm-4 col-lg-4 col-md-4"> 
         <div class="thumbnail">
