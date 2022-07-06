@@ -1,4 +1,5 @@
 ﻿using LanchesMac.Context;
+using LanchesMac.Models;
 using LanchesMac.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +34,13 @@ namespace LanchesMac
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<CategoriaRepository, CategoriaRepository>();
             services.AddTransient<LancheRepository, LancheRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+
+
+            services.AddScoped(cp => CarrinhoCompra.GetCarrinho(cp));
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +59,7 @@ namespace LanchesMac
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
